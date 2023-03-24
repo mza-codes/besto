@@ -19,10 +19,10 @@ export default function UserCard() {
                 <span className="h6 text-red-500">6</span>
             </div>
             <Hr />
-            <article className="col gap-2">
+            <article className="col gap-4 py-4">
                 <div className="row justify-between items-center gap-2">
                     <span>Inbox response rate: </span>
-                    <div className="horizontal-bar-wrap flex-grow mx-2 min-w-[150px] md:min-w-[280px]">
+                    <div className="horizontal-bar-wrap flex-grow mx-2 min-w-[150px] md:min-w-[160px]">
                         <div style={{ width: `${60}%` }} className="bar"></div>
                     </div>
                     <b className="">60%</b>
@@ -30,7 +30,7 @@ export default function UserCard() {
 
                 <div className="row justify-between items-center gap-2">
                     <span>Order response rate: </span>
-                    <div className="horizontal-bar-wrap flex-grow mx-2 min-w-[150px] md:min-w-[280px]">
+                    <div className="horizontal-bar-wrap flex-grow mx-2 min-w-[150px] md:min-w-[160px]">
                         <div style={{ width: `${50}%` }} className="bar"></div>
                     </div>
                     <b className="">50%</b>
@@ -38,7 +38,7 @@ export default function UserCard() {
 
                 <div className="row justify-between items-center gap-2">
                     <span>Delivered on time: </span>
-                    <div className="horizontal-bar-wrap flex-grow mx-2 min-w-[150px] md:min-w-[280px]">
+                    <div className="horizontal-bar-wrap flex-grow mx-2 min-w-[150px] md:min-w-[160px]">
                         <div style={{ width: `${90}%` }} className="bar"></div>
                     </div>
                     <b className="">90%</b>
@@ -46,7 +46,7 @@ export default function UserCard() {
 
                 <div className="row justify-between items-center gap-2">
                     <span>Order Completion: </span>
-                    <div className="horizontal-bar-wrap flex-grow mx-2 min-w-[150px] md:min-w-[280px]">
+                    <div className="horizontal-bar-wrap flex-grow mx-2 min-w-[150px] md:min-w-[160px]">
                         <div style={{ width: `${100}%` }} className="bar"></div>
                     </div>
                     <b className="">100%</b>
