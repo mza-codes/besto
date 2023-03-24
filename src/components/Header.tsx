@@ -1,10 +1,12 @@
 import { routes } from "@/contants";
 import AppLogo from "./assets/AppLogo";
 import Link from "next/link";
-import { MdHelp, MdNotifications } from "react-icons/md";
-import { FiMail } from "react-icons/fi";
+import { MdNotifications } from "react-icons/md";
+import { RiQuestionFill } from "react-icons/ri";
+import { HiMail, HiMenuAlt3 } from "react-icons/hi";
 import Avatar from "./user/Avatar";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { IconType } from "react-icons";
 
 export default function Header() {
     return (
@@ -31,21 +33,25 @@ export default function Header() {
                 </div>
             </div>
             <div className="hidden sm:block">
-                <ul className="row items-center mx-4 gap-4">
-                    <li className="text-2xl p-1 icon">
-                        <MdNotifications />
-                    </li>
-
-                    <li className="text-2xl p-1 icon">
-                        <FiMail />
-                    </li>
-
-                    <li className="text-2xl p-1 icon">
-                        <MdHelp />
-                    </li>
+                <ul className="row items-center mx-2 gap-3">
+                    {icons.map((Icon, i) => (
+                        <li key={i} className="text-2xl p-1 icon">
+                            <Icon />
+                        </li>
+                    ))}
                     <Avatar />
+                </ul>
+            </div>
+            <div className="block sm:hidden">
+                <ul className="row items-center mx-2 gap-4">
+                    <Avatar />
+                    <span className="text-4xl icon">
+                        <HiMenuAlt3 />
+                    </span>
                 </ul>
             </div>
         </header>
     );
 }
+
+var icons: IconType[] = [MdNotifications, HiMail, RiQuestionFill];

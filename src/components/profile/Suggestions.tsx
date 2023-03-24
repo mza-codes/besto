@@ -11,9 +11,9 @@ export default function Suggestions() {
                 <span className="text-lg text-gray-600">Upgrade Your Business</span>
                 <hr className={`h-[3px] hr mx-4 flex-grow my-2`} />
             </div>
-            <main className="white-card w-full flex-grow">
+            <main className="white-card w-full flex-grow py-6">
                 <article className="p-6 space-y-6">
-                    <h4 className="text-3xl font-black">3 Step to become a top seller on {BRAND}</h4>
+                    <h4 className="text-3xl font-black">3 Steps to become a top seller on {BRAND}</h4>
                     <p className="text-gray-500" style={{ maxWidth: `${500}px` }}>
                         The key to your success on {BRAND} is the brand you build for yourself through your {BRAND}
                         Reputaion. We gathered some tips and resources to help you become a leading seller on {BRAND}.

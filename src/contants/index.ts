@@ -1,6 +1,6 @@
 export const BRAND = `Fiverr`;
 
-export const genTitle = (pre: string) => `${pre} | ${BRAND} - Freelancing`;
+export const genTitle = (pre: string) => `${pre} | ${BRAND}`;
 
 export const routes = [
     {
@@ -8,15 +8,15 @@ export const routes = [
         name: "Dashboard",
     },
     {
-        path: "/login",
+        path: "/",
         name: "My Business",
     },
     {
-        path: "/signup",
+        path: "/",
         name: "Growth & Marketing",
     },
     {
-        path: "/profile",
+        path: "/",
         name: "Analytics",
     },
 ];
