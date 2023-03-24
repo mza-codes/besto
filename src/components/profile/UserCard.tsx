@@ -1,12 +1,11 @@
 import Image from "next/image";
 import React from "react";
 import Hr from "../assets/Hr";
-import { MONTHS } from "@/contants";
 
 export default function UserCard() {
     return (
         <div className="white-card p-4 space-y-4 py-14">
-            <div className="min-w-[250px] md:min-w-[320px] row items-center justify-between gap-2 pb-4">
+            <div className="min-w-[200px] md:min-w-[360px] row items-center justify-between gap-2 pb-4">
                 <div className="row gap-2 center">
                     <Image
                         className="w-20 h-20 aspect-square"
@@ -17,39 +16,51 @@ export default function UserCard() {
                     />
                     <span className="h6">Alex Bill</span>
                 </div>
-                <span className="h6">6</span>
+                <span className="h6 text-red-500">6</span>
             </div>
             <Hr />
             <article className="col gap-2">
-                <div className="row justify-between items-center">
+                <div className="row justify-between items-center gap-2">
                     <span>Inbox response rate: </span>
-                    <b className="text-green-500">80%</b>
+                    <div className="horizontal-bar-wrap flex-grow mx-2 min-w-[150px] md:min-w-[280px]">
+                        <div style={{ width: `${60}%` }} className="bar"></div>
+                    </div>
+                    <b className="">60%</b>
                 </div>
 
-                <div className="row justify-between items-center">
-                    <span>Inbox response time: </span>
-                    <b className="text-sky-800">3 Hours</b>
-                </div>
-
-                <div className="row justify-between items-center">
+                <div className="row justify-between items-center gap-2">
                     <span>Order response rate: </span>
-                    <b className="text-orange-600">50%</b>
+                    <div className="horizontal-bar-wrap flex-grow mx-2 min-w-[150px] md:min-w-[280px]">
+                        <div style={{ width: `${50}%` }} className="bar"></div>
+                    </div>
+                    <b className="">50%</b>
                 </div>
 
-                <div className="row justify-between items-center">
+                <div className="row justify-between items-center gap-2">
                     <span>Delivered on time: </span>
-                    <b className="text-green-600">90%</b>
+                    <div className="horizontal-bar-wrap flex-grow mx-2 min-w-[150px] md:min-w-[280px]">
+                        <div style={{ width: `${90}%` }} className="bar"></div>
+                    </div>
+                    <b className="">90%</b>
                 </div>
 
-                <div className="row justify-between items-center">
+                <div className="row justify-between items-center gap-2">
                     <span>Order Completion: </span>
-                    <b className="text-emerald-600">100%</b>
+                    <div className="horizontal-bar-wrap flex-grow mx-2 min-w-[150px] md:min-w-[280px]">
+                        <div style={{ width: `${100}%` }} className="bar"></div>
+                    </div>
+                    <b className="">100%</b>
+                </div>
+
+                <div className="row justify-between items-center gap-2">
+                    <span>Inbox response time: </span>
+                    <b className="text-green-500">3 Hours</b>
                 </div>
             </article>
             <Hr />
-            <div className="row justify-between items-center">
-                <span>Earned in Mrach:</span>
-                <b className="text-lime-500">$45.4 K</b>
+            <div className="row justify-between items-center gap-2">
+                <span>Earned in March:</span>
+                <b className="">$45.4 K</b>
             </div>
         </div>
     );
