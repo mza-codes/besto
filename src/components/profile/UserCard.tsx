@@ -16,7 +16,7 @@ export default function UserCard() {
                     />
                     <span className="h6">Alex Bill</span>
                 </div>
-                <span className="h6 text-red-500">6</span>
+                <span className="badge bg-red-600 text-white">6</span>
             </div>
             <Hr />
             <article className="col gap-4 py-4">

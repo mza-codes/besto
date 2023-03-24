@@ -44,6 +44,11 @@
     @apply bg-sky-200 hover:bg-sky-300 rounded-lg py-2 px-3 text-sm;
 }
 
+.badge{
+    @apply p-2 text-sm font-medium rounded-full
+}
+
+/* /// */
 .app-page {
     @apply bg-gradient-to-b from-green-300 to-fuchsia-600 min-h-screen w-full flex flex-col items-center justify-center;
 }

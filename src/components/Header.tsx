@@ -10,16 +10,19 @@ import { IconType } from "react-icons";
 
 export default function Header() {
     return (
-        <header className="app-header">
-            <div className="row items-center gap-2 mx-2">
+        <header className="app-header px-4">
+            <div className="row items-center gap-2">
                 <Link href={"/"}>
                     <AppLogo />
                 </Link>
                 <div className="hidden lg:block">
                     <ul className="row items-center mx-2 gap-1">
                         {routes.map((link, i) => (
-                            <li className="row items-center" key={link.name}>
-                                <Link className="p-2 hover:text-opacity-50" href={link.path}>
+                            <li
+                                title="Under Progress"
+                                className="row items-center hover:text-opacity-50 text-black"
+                                key={link.name}>
+                                <Link className="p-2" href={link.path}>
                                     {link.name}
                                 </Link>
                                 {i != 0 && (
@@ -43,9 +46,8 @@ export default function Header() {
                 </ul>
             </div>
             <div className="block sm:hidden">
-                <ul className="row items-center mx-2 gap-4">
-                    <Avatar />
-                    <span className="text-4xl icon">
+                <ul className="row items-center gap-4">
+                    <span className="text-4xl icon text-opacity-50 rounded-xl hover:text-opacity-100 text-black p-2">
                         <HiMenuAlt3 />
                     </span>
                 </ul>
