@@ -1,4 +1,4 @@
-import { genTitle } from "@/utils";
+import { genTitle } from "@/contants";
 import "@/styles/index.css";
 import Header from "@/components/Header";
 import { Poppins } from "next/font/google";
