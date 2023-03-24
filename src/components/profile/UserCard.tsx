@@ -5,7 +5,7 @@ import { MONTHS } from "@/contants";
 
 export default function UserCard() {
     return (
-        <div className="white-card p-4 space-y-4">
+        <div className="white-card p-4 space-y-4 py-14">
             <div className="min-w-[250px] md:min-w-[320px] row items-center justify-between gap-2 pb-4">
                 <div className="row gap-2 center">
                     <Image

@@ -11,7 +11,7 @@ export default function Header() {
             <ul className="row items-center mx-2 gap-1">
                 {routes.map((link) => (
                     <li key={link.name}>
-                        <Link className="text-sm btn-hover btn" href={link.path}>
+                        <Link className="header-link" href={link.path}>
                             {link.name}
                         </Link>
                     </li>

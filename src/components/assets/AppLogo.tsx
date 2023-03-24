@@ -1,3 +1,12 @@
+import { Righteous } from "next/font/google";
+
+const righteous = Righteous({
+    subsets: ["latin"],
+    weight: "400",
+    display: "swap",
+    preload: true,
+});
+
 export default function AppLogo({ classes = "" }: AppLogoProps) {
     return (
         <div className={`p-4 ${classes} relative -top-2`}>
@@ -12,7 +21,9 @@ type AppLogoProps = {
 };
 
 export const BrandName = () => (
-    <h5 className="h6">
-        Best<b className="text-green-800">o</b>
-    </h5>
+    <span className={`text-4xl tracking-wider ${righteous.className}`}>
+        <b className="text-green-700">B</b>
+        <span className="text-fuchsia-7000">est</span>
+        <b className="text-sky-7000">o</b>
+    </span>
 );

@@ -4,8 +4,8 @@ import UserCard from "@/components/profile/UserCard";
 
 export default function Home() {
     return (
-        <main className="pt-24 p-3">
-            <div className="row items-start gap-2 w-full">
+        <main className="pt-24 p-6">
+            <div className="row items-start gap-6 w-full">
                 <UserCard />
                 <section className="col gap-2 flex-grow">
                     <StatusBar />
