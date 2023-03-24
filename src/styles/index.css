@@ -26,6 +26,20 @@
     @apply min-h-screen flex flex-col items-center justify-center;
 }
 
+.white-card {
+    @apply bg-white shadow-md rounded-sm;
+}
+
+.hr {
+    background-color: var(--border-counter);
+}
+
+.app-header {
+    @apply fixed h-[70px] w-full flex justify-between items-center z-50 shadow-lg;
+    background-color: var(--bg-header);
+    /* hover:shadow-xl */
+}
+
 .app-page {
     @apply bg-gradient-to-b from-green-300 to-fuchsia-600 min-h-screen w-full flex flex-col items-center justify-center;
 }
@@ -68,6 +82,10 @@ body {
 
 .btn-submit {
     @apply py-2 px-4 text-sm rounded-md;
+}
+
+.btn {
+    @apply py-1 px-2 cursor-pointer;
 }
 
 .btn-hover {
