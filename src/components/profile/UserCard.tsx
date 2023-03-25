@@ -2,7 +2,20 @@ import Image from "next/image";
 import React from "react";
 import Hr from "../assets/Hr";
 
-export default function UserCard() {
+type UserProps = {
+    name: string;
+};
+
+export default function UserCard({ name }: UserProps) {
+    const data = {
+        irr: Math.floor(Math.random() * 65 + 35),
+        orr: Math.floor(Math.random() * 70 + 30),
+        dot: Math.floor(Math.random() * 90 + 10),
+        time: Math.floor(Math.random() * 16 + 1),
+        order_completion: Math.floor(Math.random() * 85 + 15),
+        earned: Math.floor(Math.random() * 22 + 2),
+        works: Math.floor(Math.random() * 80 + 4),
+    };
     return (
         <div className="white-card p-4 space-y-4 py-14">
             <div className="min-w-[200px] md:min-w-[360px] row items-center justify-between gap-2 pb-4">
@@ -14,53 +27,55 @@ export default function UserCard() {
                         width={260}
                         height={260}
                     />
-                    <span className="h6">Alex Bill</span>
+                    <span className="h6 capitalize">{name?.length > 20 ? name.slice(0, 20) + " .." : name}</span>
                 </div>
-                <span className="badge bg-red-600 text-white">6</span>
+                <span className="badge bg-red-600 text-white">{data.works}</span>
             </div>
             <Hr />
             <article className="col gap-4 py-4">
                 <div className="row justify-between items-center gap-2">
                     <span>Inbox response rate: </span>
                     <div className="horizontal-bar-wrap flex-grow mx-2 min-w-[150px] md:min-w-[160px]">
-                        <div style={{ width: `${60}%` }} className="bar"></div>
+                        <div style={{ width: `${data.irr}%` }} className="bar"></div>
                     </div>
-                    <b className="">60%</b>
+                    <b className="">{data.irr}%</b>
                 </div>
 
                 <div className="row justify-between items-center gap-2">
                     <span>Order response rate: </span>
                     <div className="horizontal-bar-wrap flex-grow mx-2 min-w-[150px] md:min-w-[160px]">
-                        <div style={{ width: `${50}%` }} className="bar"></div>
+                        <div style={{ width: `${data.orr}%` }} className="bar"></div>
                     </div>
-                    <b className="">50%</b>
+                    <b className="">{data.orr}%</b>
                 </div>
 
                 <div className="row justify-between items-center gap-2">
                     <span>Delivered on time: </span>
                     <div className="horizontal-bar-wrap flex-grow mx-2 min-w-[150px] md:min-w-[160px]">
-                        <div style={{ width: `${90}%` }} className="bar"></div>
+                        <div style={{ width: `${data.dot}%` }} className="bar"></div>
                     </div>
-                    <b className="">90%</b>
+                    <b className="">{data.dot}%</b>
                 </div>
 
                 <div className="row justify-between items-center gap-2">
                     <span>Order Completion: </span>
                     <div className="horizontal-bar-wrap flex-grow mx-2 min-w-[150px] md:min-w-[160px]">
-                        <div style={{ width: `${100}%` }} className="bar"></div>
+                        <div style={{ width: `${data.order_completion}%` }} className="bar"></div>
                     </div>
-                    <b className="">100%</b>
+                    <b className="">{data.order_completion}%</b>
                 </div>
 
                 <div className="row justify-between items-center gap-2">
                     <span>Inbox response time: </span>
-                    <b className="text-green-500">3 Hours</b>
+                    <b className="text-green-500">{data.time} Hours</b>
                 </div>
             </article>
             <Hr />
             <div className="row justify-between items-center gap-2">
                 <span>Earned in March:</span>
-                <b className="">$45.4 K</b>
+                <b className="">
+                    ${data.earned}.{data.irr} K
+                </b>
             </div>
         </div>
     );
