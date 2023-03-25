@@ -21,7 +21,7 @@ export default function Suggestions() {
                         Reputaion. We gathered some tips and resources to help you become a leading seller on {BRAND}.
                     </p>
                 </article>
-                <div className="mx-4 row flex-shrink gap-2">
+                <div className="mx-4 inline-flex flex-wrap flex-shrink gap-2">
                     {suggestions.map((topic, i) => (
                         <SuggestionCard Icon={topic.icon} description={topic.description} title={topic.title} key={i} />
                     ))}
