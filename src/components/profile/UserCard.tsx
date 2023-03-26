@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Hr from "../assets/Hr";
+import Name from "./Name";
 
 type UserProps = {
     name: string;
@@ -27,7 +28,7 @@ export default function UserCard({ name }: UserProps) {
                         width={260}
                         height={260}
                     />
-                    <span className="h6 capitalize">{name?.length > 20 ? name.slice(0, 20) + " .." : name}</span>
+                    <Name name={name} />
                 </div>
                 <span className="badge bg-red-600 text-white">{data.works}</span>
             </div>

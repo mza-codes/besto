@@ -16,7 +16,7 @@ export default function Upgrade() {
             <button
                 onClick={() => setShow(true)}
                 disabled={show}
-                className="btn-hover w-full py-2 px-4 text-lg font-semibold bg-green-600 hover:bg-green-500 text-white">
+                className="btn-hover w-full py-2 px-4 text-lg font-medium bg-green-600 hover:bg-green-500 text-white">
                 Join Now!
             </button>
             {show && (
