@@ -44,8 +44,8 @@
     @apply bg-sky-200 hover:bg-sky-300 rounded-lg py-2 px-3 text-sm;
 }
 
-.badge{
-    @apply p-2 text-sm font-medium rounded-full
+.badge {
+    @apply p-2 text-sm font-medium rounded-full;
 }
 
 /* /// */
@@ -70,6 +70,10 @@ body {
     padding: 0;
     background-color: var(--bg-main);
     color: var(--text-main);
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 .page-link {

@@ -25,7 +25,7 @@ export default function Header() {
                                 <Link className="p-2" href={link.path}>
                                     {link.name}
                                 </Link>
-                                {i != 0 && (
+                                {i > 0 && (
                                     <span className="text-xl">
                                         <MdKeyboardArrowDown />
                                     </span>
