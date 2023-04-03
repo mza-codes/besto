@@ -2,7 +2,7 @@ export const metadata = {
     title: "Form Submitted Successfully!",
 };
 
-export default ({ searchParams }: any) => {
+export default function SuccessMsg({ searchParams }: any) {
     const { email = "abc@def.com" } = searchParams;
     return (
         <main className="col center text-center h-[90dvh] pt-6 px-2 gap-3">

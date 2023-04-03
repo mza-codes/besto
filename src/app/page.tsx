@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
-export default () => {
+export default function Redirect() {
     return redirect("/fiverr");
-};
+}

@@ -5,7 +5,7 @@ export const metadata = {
     title: "Meet Up!",
 };
 
-export default () => {
+export default function MeetUpHome() {
     return (
         <>
             <section className={`relative pb-6 flex justify-between items-center flex-wrap`}>
